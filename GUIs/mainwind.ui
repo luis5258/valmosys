@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>565</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Sistema Integral de Produccion</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCatalogos">
+    <property name="title">
+     <string>Catalogos</string>
+    </property>
+    <widget class="QMenu" name="menuListaProductos">
+     <property name="title">
+      <string>Productos</string>
+     </property>
+     <addaction name="actionLista_Productos"/>
+     <addaction name="actionTipos_presentacion"/>
+     <addaction name="actionContenedores_Prod"/>
+    </widget>
+    <addaction name="actionClientes"/>
+    <addaction name="actionProveedores"/>
+    <addaction name="actionOperadores"/>
+    <addaction name="separator"/>
+    <addaction name="actionMaterias_Primas"/>
+    <addaction name="menuListaProductos"/>
+    <addaction name="actionUnidades_de_Medida"/>
+    <addaction name="separator"/>
+    <addaction name="actionCorrales"/>
+    <addaction name="actionTipo_de_Animales"/>
+    <addaction name="separator"/>
+    <addaction name="actionContenedores_Mat_Primas"/>
+    <addaction name="actionContenedores_Producto"/>
+   </widget>
+   <widget class="QMenu" name="menuProcesos">
+    <property name="title">
+     <string>Procesos</string>
+    </property>
+    <widget class="QMenu" name="menuInventario_Inicial_Materia_Prima">
+     <property name="title">
+      <string>Inventario Inicial Materia Prima</string>
+     </property>
+     <addaction name="actionInvIniMPCaptura"/>
+     <addaction name="actionInvInicLista_Ultimos"/>
+    </widget>
+    <widget class="QMenu" name="menuSalida_Por_Servido_Captura_Manual">
+     <property name="title">
+      <string>Salida  Por Servido</string>
+     </property>
+     <addaction name="actionLista_Ordenes_Servido"/>
+     <addaction name="actionCaptura_Manual_Servidos"/>
+    </widget>
+    <widget class="QMenu" name="menuEntrada_Materias_Primas">
+     <property name="title">
+      <string>Entrada Materias Primas</string>
+     </property>
+     <addaction name="actionCapturaEntMP"/>
+     <addaction name="actionEdicionMovsMP"/>
+    </widget>
+    <widget class="QMenu" name="menuSalida_Por_Bascula">
+     <property name="title">
+      <string>Salida Por Bascula</string>
+     </property>
+     <addaction name="actionCapturaSalXBas"/>
+     <addaction name="actionEdicionSalXBas"/>
+    </widget>
+    <widget class="QMenu" name="menuEdicion_Movimientos">
+     <property name="title">
+      <string>Edicion Movimientos</string>
+     </property>
+     <addaction name="actionEdicionMovimientosMP"/>
+     <addaction name="actionEdicionMovimientosProductos"/>
+    </widget>
+    <addaction name="menuEntrada_Materias_Primas"/>
+    <addaction name="actionEntradaProductos"/>
+    <addaction name="menuSalida_Por_Bascula"/>
+    <addaction name="menuSalida_Por_Servido_Captura_Manual"/>
+    <addaction name="menuEdicion_Movimientos"/>
+    <addaction name="separator"/>
+    <addaction name="actionAsignacion_Corral"/>
+    <addaction name="actionEntSalAnimales"/>
+    <addaction name="separator"/>
+    <addaction name="menuInventario_Inicial_Materia_Prima"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuReportes">
+    <property name="title">
+     <string>Reportes</string>
+    </property>
+    <widget class="QMenu" name="menuReportesMP">
+     <property name="title">
+      <string>Reportes  Materias Primas</string>
+     </property>
+     <addaction name="actionMovimientosMP"/>
+     <addaction name="actionPorAlmacen_y_MP"/>
+    </widget>
+    <widget class="QMenu" name="menuRep_Movimientos_de_Animales">
+     <property name="title">
+      <string>Rep Movimientos de Animales</string>
+     </property>
+     <addaction name="actionRepMovAnimales"/>
+     <addaction name="actionRepMovAnimalesClieCorral"/>
+     <addaction name="actionPor_Cliente_Corrales"/>
+     <addaction name="actionPor_Cliente_Corral_Cant_Actual"/>
+    </widget>
+    <widget class="QMenu" name="menuReportes_Productos">
+     <property name="title">
+      <string>Reportes Productos</string>
+     </property>
+     <addaction name="actionRepProdMov"/>
+    </widget>
+    <widget class="QMenu" name="menuRep_Salidas_Ventas">
+     <property name="title">
+      <string>Rep Salidas (Ventas)</string>
+     </property>
+     <addaction name="RepVen_AlmaProdPresenta"/>
+     <addaction name="RepVen_ClienProdPresenta"/>
+     <addaction name="RepVen_AlmaClienProdPresenta"/>
+     <addaction name="actionVentasMovTodos"/>
+    </widget>
+    <widget class="QMenu" name="menuReportes_de_Surtidos">
+     <property name="title">
+      <string>Reportes de  Servidos</string>
+     </property>
+     <addaction name="actionSurtidoMovimientos"/>
+     <addaction name="actionLiquidacionCliente"/>
+     <addaction name="actionRep_Diario_Promedio"/>
+    </widget>
+    <addaction name="menuReportes_de_Surtidos"/>
+    <addaction name="menuReportesMP"/>
+    <addaction name="menuReportes_Productos"/>
+    <addaction name="menuRep_Movimientos_de_Animales"/>
+    <addaction name="menuRep_Salidas_Ventas"/>
+    <addaction name="action"/>
+   </widget>
+   <widget class="QMenu" name="menuHerramientas">
+    <property name="title">
+     <string>Herramientas</string>
+    </property>
+    <addaction name="actionConfiguraciones"/>
+   </widget>
+   <addaction name="menuCatalogos"/>
+   <addaction name="menuProcesos"/>
+   <addaction name="menuReportes"/>
+   <addaction name="menuHerramientas"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionTipo_de_Animales">
+   <property name="text">
+    <string>Tipo de Animales</string>
+   </property>
+  </action>
+  <action name="actionClientes">
+   <property name="text">
+    <string>Clientes</string>
+   </property>
+  </action>
+  <action name="actionProveedores">
+   <property name="text">
+    <string>Proveedores</string>
+   </property>
+  </action>
+  <action name="actionOperadores">
+   <property name="text">
+    <string>Operadores</string>
+   </property>
+  </action>
+  <action name="actionUnidades_de_Medida">
+   <property name="text">
+    <string>Unidades de Medida</string>
+   </property>
+  </action>
+  <action name="actionMaterias_Primas">
+   <property name="text">
+    <string>Materias Primas</string>
+   </property>
+  </action>
+  <action name="actionCorrales">
+   <property name="text">
+    <string>Corrales</string>
+   </property>
+  </action>
+  <action name="actionContenedores_Mat_Primas">
+   <property name="text">
+    <string>Contenedores Mat Primas</string>
+   </property>
+  </action>
+  <action name="actionUsuarios">
+   <property name="text">
+    <string>Usuarios</string>
+   </property>
+  </action>
+  <action name="actionContenedores_Producto">
+   <property name="text">
+    <string>Contenedores Producto</string>
+   </property>
+  </action>
+  <action name="actionEntradaProductos">
+   <property name="text">
+    <string>Entrada Productos</string>
+   </property>
+  </action>
+  <action name="actionEntSalAnimales">
+   <property name="text">
+    <string>Ent-Salida Animales</string>
+   </property>
+  </action>
+  <action name="actionSalidas_de_Animales">
+   <property name="text">
+    <string>Salidas de Animales</string>
+   </property>
+  </action>
+  <action name="actionOrdenes_de_Surtido">
+   <property name="text">
+    <string>Ordenes de Surtido Corrales</string>
+   </property>
+  </action>
+  <action name="actionEdoSurtidoOrdenes">
+   <property name="text">
+    <string>Estado de Surtido de Ordenes</string>
+   </property>
+  </action>
+  <action name="actionRep_Requerimientos_de_Surtido">
+   <property name="text">
+    <string>Rep Requerimientos de Surtido</string>
+   </property>
+  </action>
+  <action name="actionAsignacion_Corral">
+   <property name="text">
+    <string>Asignacion Corral</string>
+   </property>
+  </action>
+  <action name="actionSalidaMateriasPrimas">
+   <property name="text">
+    <string>Salida Materia Prima</string>
+   </property>
+  </action>
+  <action name="actionInventarioInicialProd">
+   <property name="text">
+    <string>Inventario Inicial Productos</string>
+   </property>
+  </action>
+  <action name="actionBajar_Ordenes_a_USB">
+   <property name="text">
+    <string>Hab. Ordenes para Tolvas</string>
+   </property>
+  </action>
+  <action name="actionSubir_Ordenes_de_USB">
+   <property name="text">
+    <string>Subir Ordenes Comp. por Tolvas</string>
+   </property>
+  </action>
+  <action name="actionConfiguraciones">
+   <property name="text">
+    <string>Configuraciones</string>
+   </property>
+  </action>
+  <action name="actionMovimientosMP">
+   <property name="text">
+    <string>Movimientos</string>
+   </property>
+  </action>
+  <action name="actionPor_Alamacen_Deatalle">
+   <property name="text">
+    <string>Por Almacen y MP Sumas</string>
+   </property>
+  </action>
+  <action name="actionPor_Almacen_Sumas_Ent_Salidas">
+   <property name="text">
+    <string>Por Almacen Sumas Ent Salidas</string>
+   </property>
+  </action>
+  <action name="actionPorAlmacen_y_MP">
+   <property name="text">
+    <string>PorAlmacen y MP</string>
+   </property>
+  </action>
+  <action name="actionRepMovAnimales">
+   <property name="text">
+    <string>Movimientos</string>
+   </property>
+  </action>
+  <action name="actionRepMovAnimalesClieCorral">
+   <property name="text">
+    <string>ResPorClieCorral</string>
+   </property>
+  </action>
+  <action name="actionRepProdMov">
+   <property name="text">
+    <string>Movimientos</string>
+   </property>
+  </action>
+  <action name="actionRepProdCliente">
+   <property name="text">
+    <string>Por Almacen</string>
+   </property>
+  </action>
+  <action name="actionRepAlmaPor_Producto">
+   <property name="text">
+    <string>Por Producto</string>
+   </property>
+  </action>
+  <action name="actionLista_Productos">
+   <property name="text">
+    <string>Lista Productos</string>
+   </property>
+  </action>
+  <action name="actionTipos_presentacion">
+   <property name="text">
+    <string>Tipos Presentacion</string>
+   </property>
+  </action>
+  <action name="actionContenedores_Prod">
+   <property name="text">
+    <string>Contenedores Prod</string>
+   </property>
+  </action>
+  <action name="RepVen_AlmaProdPresenta">
+   <property name="text">
+    <string>Almacen,Producto,Presentacion</string>
+   </property>
+  </action>
+  <action name="RepVen_ClienProdPresenta">
+   <property name="text">
+    <string>Cliente,Producto,Presentacion</string>
+   </property>
+  </action>
+  <action name="RepVen_AlmaClienProdPresenta">
+   <property name="text">
+    <string>Alma,Cliente,Producto,Presenta</string>
+   </property>
+  </action>
+  <action name="actionVenPor_Cliente">
+   <property name="text">
+    <string>Por Cliente</string>
+   </property>
+  </action>
+  <action name="actionVenPor_Almacen">
+   <property name="text">
+    <string>Por Almacen</string>
+   </property>
+  </action>
+  <action name="actionSurtidoMovimientos">
+   <property name="text">
+    <string>Movimientos</string>
+   </property>
+  </action>
+  <action name="actionSurtidoProducto_En_Corral">
+   <property name="text">
+    <string>Producto En Corral</string>
+   </property>
+  </action>
+  <action name="actionSurtidoTotal_Por_Producto">
+   <property name="text">
+    <string>Total Por Producto</string>
+   </property>
+  </action>
+  <action name="actionSurtidoPromedio_Diario">
+   <property name="text">
+    <string>Promedio Diario</string>
+   </property>
+  </action>
+  <action name="actionRepLiquidacion_Cliente">
+   <property name="text">
+    <string>Liquidacion Cliente</string>
+   </property>
+  </action>
+  <action name="actionVentasMovTodos">
+   <property name="text">
+    <string>Movimientos</string>
+   </property>
+  </action>
+  <action name="actionLiquidacionCliente">
+   <property name="text">
+    <string>LiquidacionCliente</string>
+   </property>
+  </action>
+  <action name="actionInvIniMPCaptura">
+   <property name="text">
+    <string>Captura</string>
+   </property>
+  </action>
+  <action name="actionInvInicLista_Ultimos">
+   <property name="text">
+    <string>Lista Ultimos</string>
+   </property>
+  </action>
+  <action name="actionLista_Ordenes_Servido">
+   <property name="text">
+    <string>Lista Ordenes Servido</string>
+   </property>
+  </action>
+  <action name="actionCaptura_Manual_Servidos">
+   <property name="text">
+    <string>Captura Manual Servidos</string>
+   </property>
+  </action>
+  <action name="actionPor_Cliente_Corrales">
+   <property name="text">
+    <string>Por Cliente Corrales</string>
+   </property>
+  </action>
+  <action name="actionCapturaEntMP">
+   <property name="text">
+    <string>Captura  </string>
+   </property>
+  </action>
+  <action name="actionEdicionMovsMP">
+   <property name="text">
+    <string> Editar Movimientos</string>
+   </property>
+  </action>
+  <action name="actionCapturaSalXBas">
+   <property name="text">
+    <string>Captura</string>
+   </property>
+  </action>
+  <action name="actionEdicionSalXBas">
+   <property name="text">
+    <string>Edicion</string>
+   </property>
+  </action>
+  <action name="actionRep_Diario_Promedio">
+   <property name="text">
+    <string>Diario Promedio</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Reportes  Cliente Servido y Animales</string>
+   </property>
+  </action>
+  <action name="actionPor_Cliente_Corral_Cant_Actual">
+   <property name="text">
+    <string>Por Cliente Corral  Cant Actual</string>
+   </property>
+  </action>
+  <action name="actionEdicion_Mvtos">
+   <property name="text">
+    <string>Edicion Mvtos  MP y Prod</string>
+   </property>
+  </action>
+  <action name="actionEdicionMovimientosMP">
+   <property name="text">
+    <string>MP</string>
+   </property>
+  </action>
+  <action name="actionEdicionMovimientosProductos">
+   <property name="text">
+    <string>Productos</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

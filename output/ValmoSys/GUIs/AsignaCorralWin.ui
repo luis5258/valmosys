@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UiAsignaCorral</class>
+ <widget class="QDialog" name="UiAsignaCorral">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>949</width>
+    <height>611</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Asignacion de Corral</string>
+  </property>
+  <widget class="QTableWidget" name="Tabla">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>381</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <property name="autoScrollMargin">
+    <number>50</number>
+   </property>
+   <column>
+    <property name="text">
+     <string>ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Corral</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Estatus</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QComboBox" name="ClienteCBox">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>30</y>
+     <width>341</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ClaveLbl">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>81</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+font-size: 16px;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Cliente:</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>540</y>
+     <width>311</width>
+     <height>53</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Filtro:</string>
+   </property>
+   <widget class="QRadioButton" name="RBotPorCliente">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>85</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Por Cliente</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="RBotPorFecha">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Por Fecha</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="RBotPorCorral">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>20</y>
+      <width>85</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Por Corral</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="FechalLbl">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>20</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Fecha de Movimiento :</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="FechaSel">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>20</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="maximumDate">
+    <date>
+     <year>2050</year>
+     <month>12</month>
+     <day>31</day>
+    </date>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+   <property name="date">
+    <date>
+     <year>2021</year>
+     <month>1</month>
+     <day>1</day>
+    </date>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CorrLibresLbl">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>60</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Corrales Libres:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PBIzq">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>540</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>      Libera</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CorrAsignaLbl">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>60</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>CorralesAsignados:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PBDer">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>540</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>   Asigna</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PBCerrar">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>540</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cerrar</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="Tabla2">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>80</y>
+     <width>541</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <property name="autoScrollMargin">
+    <number>50</number>
+   </property>
+   <column>
+    <property name="text">
+     <string>ID(Oculta)</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Corral</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>IDCliente(Oculta)</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Asignado A:</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Fecha de  Asigna</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
